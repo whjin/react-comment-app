@@ -83,6 +83,7 @@ body {
 
 /*评论组件样式*/
 .comment {
+    position: relative;
     display: flex;
     border-bottom: 1px solid #f1f1f1;
     padding-bottom: 10px;
@@ -94,6 +95,32 @@ body {
     flex-shrink: 0;
 }
 
+.comment-username {
+    color: #00a3cf;
+    font-style: italic;
+}
+
+.comment-createdtime {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px 5px 5px;
+    font-size: 0.85em;
+}
+
+.comment:hover .comment-delete{
+    color: #00a3cf;
+}
+
+.comment-delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: transparent;
+    font-size: 0.85em;
+    cursor: pointer;
+}
+
 .comment span {
     color: #00a3cf;
     font-style: italic;
@@ -101,4 +128,10 @@ body {
 
 .comment p {
     margin: 0;
+}
+
+code {
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    padding: 0 2px;
 }
