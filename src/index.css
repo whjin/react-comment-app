@@ -20,29 +20,25 @@ body {
     margin-bottom: 10px;
 }
 
-.comment-field,
-.comment-field .comment-field-name,
-.comment-field .comment-field-input {
-    display: flex;
-}
-
 .comment-field {
+    display: flex;
     margin-bottom: 15px;
 }
 
 .comment-field .comment-field-name {
+    display: flex;
     font-size: 1em;
     flex-basis: 100px;
 }
 
-.comment-field .comment-field-input,
-.comment-field-input input,
-.comment-field-input textarea {
+.comment-field .comment-field-input {
+    display: flex;
     flex: 1;
 }
 
 .comment-field-input input,
 .comment-field-input textarea {
+    flex: 1;
     font-size: 1em;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
@@ -52,7 +48,7 @@ body {
 }
 
 .comment-field-input textarea {
-    height: 100%;
+    height: 100px;
 }
 
 .comment-field-button {
@@ -114,16 +110,11 @@ body {
 
 .comment-delete {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     color: transparent;
     font-size: 0.85em;
     cursor: pointer;
-}
-
-.comment span {
-    color: #00a3cf;
-    font-style: italic;
 }
 
 .comment p {
