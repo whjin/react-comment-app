@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Comment extends Component {
-    static defaultProps = {
+export default class Comment extends Component {
+    static propTypes = {
         comment: PropTypes.object.isRequired,
         onDeleteComment: PropTypes.func,
         index: PropTypes.number
@@ -53,13 +53,14 @@ class Comment extends Component {
     }
 
     render() {
+        const comment = this.props.comment;
         return (
             <div className="comment">
                 <div className="comment-user">
-                    <span className="comment-username">{this.props.comment.username}</span>：
+                    <span className="comment-username">{comment.username}</span>：
                 </div>
                 <p dangerouslySetInnerHTML={{
-                    __html: this._getProcessedContent(this.props.comment.content)
+                    __html: this._getProcessedContent(comment.content)
                 }}/>
                 <span className="comment-createdtime">
                     {this.state.timeString}
@@ -69,5 +70,3 @@ class Comment extends Component {
         )
     }
 }
-
-export default Comment;
